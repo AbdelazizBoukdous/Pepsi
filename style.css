@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+
+}
+
+.socials a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #106581;
+  font-size: 22px;
+  transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.socials a:hover {
+  color: #ffffff;
+  transform: scale(1.3);
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.971);
+}
+
+
+#home {
+
+  
+  height: 100vh;
+  background: linear-gradient(135deg, #141E30, #243B55, #8DA5C2);
+  color: #fff;/*كيعني النصوص داخل #home غادي يكون لونها أبيض.*/
+  position: relative;/*كيعني أنو يمكن نحط عناصر داخلو بـ absolute وغايتكون بالنسبة له*/
+  overflow: hidden; /* باش ميبانش حتى عنصر زايد */
+  background-size: 400% 400%;/* khalfiya dyal linear-gradient kbrnaha 4 dyal lmrat  bax n9adro n7arkoha w taban aydan b7ala ila kt7arek b 12s*/
+  animation: gradientMove 15s  infinite ;
+}
+
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;} /*badya : الخلفية باينة من الجهة اليسرى (0%) وفوق الوسط شوية (50%). */
+
+  50% {background-position: 100% 10%;}/*west animation: الخلفية تزحزحات حتى ولات على اليمين (100%) وتحت الوسط (10%).*/
+
+  100% {background-position: 0% 50%;}/*لخلفية وصلات للوسط تقريباً (50%) وفوق (0%)*/
+  
+}
+
+
+
+
+
+.container{
+    margin: 0 2.5rem; /*k7zat b 7rem men jnab dir men fo9 te7t 0 dir background-color: red; bax tban lik*/
+
+    height: 100%;/* container wla xad xaxa kamla */
+    position: relative;
+}
+/*7ta hada mzyan dokhol lsaf7a salis
+.container {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+*/
+/*
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* يكون خلف كلشي 
+    top: 0;
+    left: 0;
+  }
+  #home .content {
+    position: relative;
+    z-index: 1; /* يكون قدام الجزئيات 
+  }
+*/
+
+
+a{
+    text-decoration: none;/*7iyed khtot*/
+}
+ul{
+    list-style: none;/*7iyed list*/
+    display: flex; 
+}
+/*
+logo 3adi pepsi_logo*/
+nav{
+    display: flex;/*wlaw 7da be3diyathom*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+
+
+
+
+
+
+/*
+logo 3adi pepsi_logo*/
+nav .logo{
+    width: 60px;
+    animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+nav .logo:hover{  
+  animation-play-state: paused;/*wa9f anmition*/
+}
+/*pesis m3a boukdous 00
+nav .logo{
+    width: 83px;
+}*/
+/* logo xfaf 1
+nav .logo{
+    width: 140px;
+} */
+/*
+nav{
+    display: flex;/*wlaw 7da be3diyathom
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0;
+}
+*/
+
+nav ul li a{
+    display: flex; 
+    align-items: center ;
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffffdf;
+    padding: 20px ;
+    
+
+    transition: color 0.3s ease;
+}
+nav ul li a:hover{
+/* باش يكون التأثير سلس */
+    /*border-bottom-color: white;*/
+    font-size: 20px;
+    transition: transform 0.4s ease;
+    color: #03a9e1;
+    text-shadow: 0 0 5px #03a9e1, 0 0 10px #03a9e1, 0 0 20px #03a9e1;
+    transform: scale(1.10);
+}
+
+
+
+nav ul li a:active{
+
+    color: #4ad2ff;
+}
+
+
+ 
+.fade-in {
+  opacity: 0;
+  transform: translateY(-20px); /* ينزل من فوق */
+  animation: fade 1s ease-in-out forwards;
+     /*kaydar animation fade lmoda dyal  1s w inti9ala salis ease-in-out forward katkhli wad3 niha2i ib9a, mayrje3ch l asel b7al da2ira li katb9a gir dor 7it dayrin fiha infiniti */
+    /*afdal xer7 howa tajriba*/
+  animation-delay: 0.1s;/*kat2akhe bidayat animation btaniya */
+}
+#home .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    height: 70%;
+    opacity: 0;/*كيبدا العنصر مخفي (شفاف) فالبداية*/
+    animation-delay: 1s;/*kat2akhe bidayat animation btaniya */
+    animation: fade 3s ease-in-out forwards;
+    /*kaydar animation fade lmoda dyal  2s w inti9ala salis ease-in-out forward katkhli wd3 niha2i ib9a mayrje3ch lsel 3eks da2ira li katb9a gir dor */
+}/*afdal xer7 howa tajriba*/
+
+
+
+@keyframes fade {
+  to {/*الحالة النهائية ديال الأنيميشن*/
+    opacity: 1;/*غادي يولي العنصر ظاهر تماماً.*/
+    transform: translateY(0);/*غادي يرجع العنصر لمكانه الأصلي*/
+  }
+}
+
+
+
+#home .content img{
+  width: 240px;
+  
+  transition: transform 0.3s ease;
+  animation: animation1 1s ;
+  /*box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* هذا هو الظل */
+  /*box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 114, 255, 0.4);*/
+  animation: float 3s ease-in-out infinite;
+  /*filter: drop-shadow(0 0 20px #00bcd4);*/
+
+
+}
+#home .content img:hover{  
+  animation-play-state: paused; /* وقف الأنميشن */;  
+
+
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+
+/*katbda dowi
+  .big-image {
+    width: 225px;
+    transition: all 0.4s ease-in-out;
+    filter: drop-shadow(0 0 15px #0072ff);
+  }
+
+  .big-image:hover {
+    transform: scale(1.08) rotate(-2deg);
+    filter: drop-shadow(0 0 25px #00c6ff);
+  }
+*/
+
+/*anamatio dyara
+  .big-image {
+    width: 225px;
+    animation: rotatePepsi 6s infinite linear;
+    filter: drop-shadow(0 0 12px #00bcd4);
+  }
+
+  @keyframes rotatePepsi {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+*/
+
+
+/*
+#home .content img:hover{
+  transform: scale(1.10);
+  
+
+}
+*/
+
+
+#home .content .content-text h1{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    
+}
+/*
+#home .content .content-text h1 span{
+    font-size: 70px;
+    letter-spacing: 1px;
+}*/
+/*m3a xadow
+#home .content .content-text h1 span {
+  font-size: 70px;
+  color: #00bcd4;
+  text-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4;
+}*/
+@keyframes g {
+  0% {
+    filter: drop-shadow(0 0 5px #19637a);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #19637a);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #19637a);
+  }
+}
+#home .content .content-text h1 span {
+  font-size: 70px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+/*هذه الخاصية كتعني: "خلي التدرج اللوني يبان فقط فوق النص"
+ بعبارة أخرى: النص غادي يولي هو لي فيه الألوان، ماشي الخلفية دياله.*/
+  -webkit-text-fill-color: transparent;
+/*كتحول لون النص إلى شفاف، باش يبان التدرج فقط.
+بلا هاد السطر، النص غادي يبقى بلون أسود مثلاً وميبانش التدرج.*/
+
+  animation: g 2s infinite;
+/*هذا هو الحل باش تزيد shadow حتى مع التدرج!
+drop-shadow() كتخدم على العنصر كامل، وتخلي ظل خارجي يبان حتى لو كان النص فيه تدرج.
+2px 2px → الإزاحة الأفقية والعامودية (يعني الظل غادي يبان شوية لتحت واليمين)
+4px → التمويه (blur)
+ # لون الظل*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#home .content .content-text p{
+    font-weight: 300;
+    margin-bottom: 30px;
+    width: 63%;/*7it wakhed 100% men content idan ndiro 60%*/
+}
+
+
+.btn{
+    font-size: 12px;
+    background:linear-gradient(90deg, #00c6ff, #0072ff);
+    padding: 10px 15px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 490;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 114, 255, 0.5);
+
+
+}
+
+
+
+
+
+.btn:hover{
+
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 114, 255, 0.8);
+
+  transform: translate(-50%, -50%) scale(1);
+
+
+}
+
+.btn:active{
+    background:linear-gradient(90deg, #063d4c, #042650);/*box-shadow: décalage-X décalage-Y flou couleur;*/
+
+}
+.social{
+    margin-left: 3rem;
+    animation: animation1 1s ;
+    
+}
+.social i{
+  display: block;
+  margin: 10px 0;
+  color: #00bfff85;/*n9esna liha xafafiya w zedna f hover bax tban mzyan f hover*/
+  font-size: 25px;
+  transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease; 
+}
+.social i:hover {
+  color: #ffffff;
+  transform: scale(1.3);
+  text-shadow: 0 0 8px rgb(0, 191, 255); /* glow effect */
+
+}
+
+.pepsi-group {
+    position: absolute;
+    bottom: 5px; /*  bach n9dr nwelleha f lbottom */
+    left: 50%;/* yji f lcenter */
+    transform: translateX(-50%);/* ydir lcenter b debt */
+    display: flex;/* ydir tsawer f sater 7da b3diyathom */
+    gap: 9px;/* distance bin tsawer */
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem ;
+    background: rgba(255, 255, 255, 0.1); /* glass effect */
+    backdrop-filter: blur(6px);
+    border-radius: 35px;
+}
+.pepsi-group .pepsi:hover{
+  cursor: pointer;
+ /* tnfekh dyal hover */
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.8); /* glow effect */
+  transform: scale(1.20);
+  border: 1.4px solid #fff;
+
+
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+/*
+.pepsi-group .pepsi:active{
+    transform: translateY(-36%);
+}*/
+.pepsi-group .pepsi {
+    width: 35px; /* smaller size */
+    background: none;
+    animation: animation2 1s;
+
+
+}
+.pepsi-group .pepsi.active-click {
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.021);
+  border: 2.5px solid #ffffff0e;
+  border-radius: 10px;
+
+}
+
+
+
+
+
+
+@keyframes animation1{
+    0%{/*ya3ni felbedya mli yalah dkhol 0%*/
+        transform: translateX(500px);/*mnin tbda*/
+    }
+    100%{/*ya3ni mli twsel blastha 100% t7bes =0*/
+        transform: translateX(0);
+    }
+}
+@keyframes animation2{
+    0%{/*ya3ni felbedya mli yalah dkhol 0%*/
+        transform: translateY(200px);/*mnin tbda*/
+    }
+    100%{/*ya3ni mli twsel blastha 100% t7bes =0*/
+        transform: translateY(0);
+    }
+}
+
+/*tablet*/
+@media(max-width:900px){
+  .container{
+    margin: 0 1rem;
+
+  }
+  nav ul a {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px ;
+  }
+  #home .content{/*kolxi wla mtdakhel hakak 3lach ndiro haka*/
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0 0;/*fo9 jnab te7t*/
+  }
+    #home .content .content-text{
+      margin-bottom: 1rem;
+    }
+  #home .content .content-text p{
+    width: 100%;
+  }
+  #home .content img{
+    width: 140px;
+    margin-bottom: 10px;
+  }
+  .social{
+    margin-left: 0;/*wlaw f lwest*/
+    margin-bottom: 12px;
+  }
+}
+@media(max-width:600px){
+  nav{
+    display: block;
+  }
+  nav .logo{
+    display: block;
+    margin: 0 auto 15px;
+  }
+  nav ul{
+    justify-content: center;
+  }
+  nav ul a{
+    font-size: 17px;
+  }
+  #home .content img{
+    width: 90px;
+    margin-bottom: 10px;
+  }
+  .pepsi-group{
+    margin-top: 8px;
+  }
+}
