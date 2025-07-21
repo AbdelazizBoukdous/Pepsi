@@ -22,3 +22,11 @@ The goal is purely **educational** — to improve my front-end development and d
 - ✅ Font Awesome (icons)  
 - ✅ Particles.js (animated background)
 
+  
+## ⚠️ Compatibility Notice
+
+This landing page is designed and optimized for **desktop screens only**.
+It may not display correctly on mobile or tablet devices.
+
+If you're viewing this on a phone, please switch to a PC or laptop for the full experience.
+
