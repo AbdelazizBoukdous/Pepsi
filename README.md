@@ -5,9 +5,9 @@
 📅 Date: July 2025  
 
 --
-<img width="2000" height="2500" alt="1" src="https://github.com/user-attachments/assets/649e100b-7054-48bd-94b7-2e346c4dd496" />
+<img width="400" height="800" alt="1" src="https://github.com/user-attachments/assets/649e100b-7054-48bd-94b7-2e346c4dd496" />
 -----------------
-<img width="2000" height="2500" alt="2" src="https://github.com/user-attachments/assets/03ea2c76-6ab4-4cbb-b0f3-ada77948f0ac" />
+<img width="400" height="800" alt="2" src="https://github.com/user-attachments/assets/03ea2c76-6ab4-4cbb-b0f3-ada77948f0ac" />
 
 
 
